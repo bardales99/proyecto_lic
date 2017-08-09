@@ -12,7 +12,7 @@ if(!isNaN(op1) && !isNaN(op2)){
 	else
 		var div=0;
 	document.write("<h1>Operaciones Basicas</h1><hr/>");
-	document.write("<div class='menu'>");
+	document.write("<div class='opciones'>");
 	document.write("<ul>");
 	document.write("<li><a href='javascript:void(0)' onclick=\"alert('"+parseInt(op1) + " + " + parseInt(op2)+ " = "+ sum+"\')\"><span>Sumar</span></a></li>");
 	document.write("<li><a href='javascript:void(0)' onclick=\"alert('"+parseInt(op1) + " - " + parseInt(op2)+ " = "+ res+"\')\"><span>Restar</span></a></li>");
