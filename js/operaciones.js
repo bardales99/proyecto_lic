@@ -5,7 +5,7 @@ if(!isNaN(op1) && !isNaN(op2)){
 	var res=parseInt(op1) - parseInt(op2);
 	var mult=parseInt(op1) * parseInt(op2);
 	var residuo=parseInt(op1) % parseInt(op2);
-	
+	//se valida el segundo numero por la division entre 0
 	if(op2!=0)
 		var div=parseInt(op1)/parseInt(op2);
 
