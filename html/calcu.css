@@ -1,1 +1,59 @@
 
+* {
+margin: 0;
+padding: 0;
+}
+html, body {
+height: 100%;
+}
+body {
+background-color: #EEEEEE;
+height: 100%;
+}
+h1{
+background: #1A8B9D;
+color: #F1F1F1;
+font: normal 2.2em Helvetica,"Liberation Sans";
+padding: 2%;
+text-align: center;
+}
+.opciones{
+overflow:hidden;
+width: 100%;
+}
+.opciones a span{
+position:relative;
+top:40%;
+}
+.opciones a:hover{
+background: #2BB3C0;
+  color: white;
+}
+.opciones li{
+display: inline;
+margin: 0;
+}
+.opciones li a{
+background: #355C7D;
+color: white;
+display:inline-block;
+height:100px;
+margin-right:5px;
+margin: 0;
+text-align: center;
+text-decoration: none;
+width:100px;
+}
+.opciones li a:visited{
+color: #EEEEEE;
+}
+.opciones ul{
+font: bold 14px Helvetica;
+list-style-type: none;
+margin: 36px auto;
+padding: 0;
+text-align: center;
+}
+.opciones ul li {
+margin: 0 12px;
+}
