@@ -22,5 +22,5 @@ if(!isNaN(op1) && !isNaN(op2)){
 	document.write("</ul>");
 	document.write("</div>");
 }else
-	alert("Debe introducir numeros!!!....");
+	alert("Debe introducir numeros");
 	
