@@ -10,5 +10,5 @@ function iniciar(){
 		boton.addEventListener("click",function(){
 			window.location= '../Index.html';
 		},false);
-}
+	}
 }
