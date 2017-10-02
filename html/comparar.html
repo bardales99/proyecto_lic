@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eWallet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General_app.css">
+      <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+</head>	
+<body>
+	<div class="menu-principal">
+		<div class="content-main"><center><img class="img-logo" src="../img/logout.PNG"><br>eWallet</center>
+		</div><br>
+		<ul>
+			<li id="cuentas" class="o-p"><i class="fa fa-credit-card" aria-hidden="true"></i>   Cuentas
+			<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES CUENTAS -->
+			<ul id="sub-cuentas" class="sub-menu1">
+				<a class="enlaces" href="efectivo.html"><li class="o-s">Efectivo</li></a>
+				<a class="enlaces" href="cuentas.html"><li class="o-s">Cuentas</li></a>
+				<a class="enlaces" href="tarjetascredito.html"><li class="o-s">Tarjetas de crédito</li></a>
+			</ul>
+
+			<a class="enla enlaces" href="ingresos.html"><li id="ingresos" class="o-p"><i class="fa fa-money" aria-hidden="true"></i>  Ingresos</li></a>
+
+			<a class="enla enlaces" href="gastos.html"><li id="gastos" class="o-p"><i class="fa fa-balance-scale" aria-hidden="true"></i>  Gastos</li></a>
+			<!--OPCIONES GASTOS -->
+			<li id="configuraciones" class="o-p"><i class="fa fa-cogs" aria-hidden="true"></i>   Configuraciones
+			<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES CONFIGURACIONES -->
+			<ul id="sub-conf" class="sub-menu2">
+				<a class="enlaces" href="tipo_pago.html"><li class="o-s">Tipo de pago por defecto</li></a>
+				<a class="enlaces" href="balance.html"><li class="o-s">Balance</li></a>
+			</ul>
+
+			<li id="estadisticas" class="o-p"><i class="fa fa-area-chart" aria-hidden="true"></i>   Estadísticas
+				<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES ESTADISTICAS -->
+			<ul id="sub-estadi" class="sub-menu3">
+				<a class="enlaces" href="gastos_ingreso.html"><li class="o-s">Gastos e Ingreso</li></a>
+				<a class="enlaces" href="javascript:void(0)">
+				<li class="o-ps">Gráficos</li></a>
+				<a class="enlaces" href="comparar.html"><li class="o-s">Comparativos</li></a>
+			</ul>
+      <li id="cerrar_sesion" class="o-p"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar sesión</li>
+		</ul>
+	</div>
+<div class="informacion">
+	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Estadisticas <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="comparar.html">Comparación de datos</a></div>
+	<div class="contenido-principal">
+		<label id="titulo-balance">Seleccione una opción:</label><br><br>
+
+		<label id="titulo-balance">Seleccione un año:</label><br>
+		<select id="inputbox" name="gas_ingr" required>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+        </select><br><br>
+        <label id="titulo-balance">Seleccione el rango de meses:</label><br>
+		<select id="inputbox" name="gas_ingr" required>
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octubre">Octubre</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+        </select>&nbsp;<select id="inputbox" name="gas_ingr" required>
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octubre">Octubre</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+        </select>
+        <br><br>
+        <label id="titulo-balance">Seleccione un rango de años:</label><br>
+		<select id="inputbox" name="gas_ingr" required>
+                  <option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+        </select>&nbsp;<select id="inputbox" name="gas_ingr" required>
+<option value="2017">2017</option>
+                  <option value="2016">2016</option>
+                  <option value="2015">2015</option>
+                  <option value="2014">2014</option>
+                  <option value="2013">2013</option>
+                  <option value="2012">2012</option>
+        </select>
+       <div id="mostrar" class="mostrar-datos">
+        	<img title="Comparativo ingresos" class="img-gr" src="../img/grafi1.jpg">&nbsp;&nbsp;
+        	<img title="Comparativo gastos" class="img-gr" src="../img/grafi1.jpg">&nbsp;&nbsp;
+        	<img title="Comparativo de ingresos vs Gastos" class="img-gr" src="../img/grafi1.jpg">
+        </div>
+	</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
+</body>
+<script type="text/javascript" src="../js/menu_principal.js"></script>
+<script type="text/javascript" src="../js/cerrar.js"></script>
+</html>

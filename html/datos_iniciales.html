@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Datos Iniciales</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+</head>
+<body class="back">
+	<div class="men menuP"><div class="logdatos logo"><a class="menuP-a" href="javascript:void(0)"><img class="menuP-img" src="../img/logout.PNG">  Wallet</a></div>
+</div>
+<!--Formulario de inicio para datos -->
+	<div id="capa-negra" class="capa-negra">
+      <div id="form-se" class="form">
+            <center>
+                  <h2>Datos Iniciales</h2><br>
+
+            <label class="lbl-input-sesion" for="inputext1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efectivo disponible</label><br><br>
+            <input type="text" pattern="[0-9]{1-10}" placeholder="Ingrese el efectivo" id="inputext1" name="username" required><br><br>
+
+            <label class="lbl-input-sesion" for="inputext2">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cuentas bancarias</label><br><br>
+
+            <div id="cuentas" class="cuentas">
+        <div>
+            <label class="lbl-input-datos" for="banco">Banco</label>
+            <input pattern="[A-Za-z]{2-15} placeholder="Ingrese el nombre del banco" type="text" name="banco" id="banco" />
+        </div>
+        <div>
+            <label class="lbl-input-datos" for="Ncuenta"># de Cuenta</label>
+            <input pattern="[0-9]{1-20} placeholder="Ingrese el # de la cuenta" type="text" name="Num_cuenta" id="Ncuenta" />
+        </div>
+        <div>
+            <label class="lbl-input-datos" for="saldo">Saldo Actual</label>
+            <input type="text" pattern="[0-9]{1-15} placeholder="Ingrese su saldo" name="saldo" id="saldo" />
+        </div>
+        <br>
+        <div>
+            <button type="button" class="agregarC" id="agregar"> + Agregar  cuenta</button>
+        </div>
+    <table class="elemen"><thead><tr>
+                <th>Banco</th>
+                <th>Numero de cuenta</th>
+                <th>Saldo</th>
+                <th></th>
+        </tr></thead><tbody id="tabla-elementos"></tbody>
+    </table>
+            </div>
+
+            </center>
+            <br>
+            <input type="button" class="btn-enviar" id="btn-enviar" value="Ingresar Datos" name="enviar">
+            <br>
+      </div><br><br>
+    </div><br><br><br>
+<center>
+<div id="modal-show" class="modal-show">
+      <div class="cerrar"><i id="cerrar" class="fa fa-times-circle" aria-hidden="true"></i></div>
+      <div id="success-modal" class="content-modal">
+           <label id="lblinner"> Revisa, tus datos no son correctos.</label>
+      </div>      
+</div>
+</center>
+
+   <div id="con2" class="contenedor2">
+      <div class="foot">&copy; eWallet</div>
+</div>
+    <script type="text/javascript" src="../js/datos_cuentas.js"></script>
+</body>
+</html>

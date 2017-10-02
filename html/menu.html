@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>eWallet - Iniciar Sesión</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+</head>
+<body class="back">
+      <div id="menu" class="men menuP"><div class="logdatos logo"><a class="menuP-a" href="../Index.html"><img class="menuP-img" src="../img/logout.PNG">   Wallet</a></div>
+</div>
+	<form name="inicio">
+      <div id="capa-negra" class="capa-negra">
+            <div id="form-se" class="form">
+            <center>
+                  <h2>Iniciar Sesión</h2><br>
 
+            <label class="lbl-input-sesion" for="inputext1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Correo de usuario</label><br><br>
+            <input type="text" placeholder="Ingrese su Correo" id="inputext1" name="correo" required><br><br>
+
+            <label class="lbl-input-sesion" for="inputext2">Contraseña</label><br><br>
+
+            <input type="password" placeholder="Ingrese su contraseña" id="inputext2" name="contra" required>
+            </center>
+            <br>
+            <input type="button" class="btn-enviar" id="btnenviar" value="Entrar" name="enviar">
+            <br><br>
+            <span class="span-cuenta">¿No tienes una cuenta? <a href="registro_usuarios.html" id="btnreg" class="redirigir-span">Registrate</a></span><br><br>
+            <span class="span-cuenta">¿Has olvidado tu contraseña? <a id="btnrecu" href="recuperar.html" class="redirigir-span">Recuperar Contraseña</a></span><br>
+      </div>
+      <br><br>
+      </div>
+      </form>
+      
+<center>
+<div id="modal-show" class="modal-show">
+      <div class="cerrar"><i id="cerrar" class="fa fa-times-circle" aria-hidden="true"></i></div>
+      <div id="success-modal" class="content-modal">
+            <label id="lblinner">Revisa, tus datos no son correctos.</label>
+      </div>      
+</div>
+</center>
+<br><br><br>
+<div id="con2" class="contenedor2">
+      <div class="foot">&copy; eWallet</div>
+</div>
+</body>
+<script type="text/javascript" src="../js/inicio.js"></script>
+</html>

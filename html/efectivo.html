@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eWallet</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General_app.css">
+      <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
+      <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+</head>	
+<body>
+	<div class="menu-principal">
+		<div class="content-main"><center><img class="img-logo" src="../img/logout.PNG"><br>eWallet</center>
+		</div><br>
+		<ul>
+			<li id="cuentas" class="o-p"><i class="fa fa-credit-card" aria-hidden="true"></i>   Cuentas
+			<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES CUENTAS -->
+			<ul id="sub-cuentas" class="sub-menu1">
+				<a class="enlaces" href="efectivo.html"><li class="o-s">Efectivo</li></a>
+				<a class="enlaces" href="cuentas.html"><li class="o-s">Cuentas</li></a>
+				<a class="enlaces" href="tarjetascredito.html"><li class="o-s">Tarjetas de crédito</li></a>
+			</ul>
+
+			<a class="enla enlaces" href="ingresos.html"><li id="ingresos" class="o-p"><i class="fa fa-money" aria-hidden="true"></i>  Ingresos</li></a>
+
+			<a class="enla enlaces" href="gastos.html"><li id="gastos" class="o-p"><i class="fa fa-balance-scale" aria-hidden="true"></i>  Gastos</li></a>
+			<!--OPCIONES GASTOS -->
+			<li id="configuraciones" class="o-p"><i class="fa fa-cogs" aria-hidden="true"></i>   Configuraciones
+			<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES CONFIGURACIONES -->
+			<ul id="sub-conf" class="sub-menu2">
+				<a class="enlaces" href="tipo_pago.html"><li class="o-s">Tipo de pago por defecto</li></a>
+				<a class="enlaces" href="balance.html"><li class="o-s">Balance</li></a>
+			</ul>
+
+			<li id="estadisticas" class="o-p"><i class="fa fa-area-chart" aria-hidden="true"></i>   Estadísticas
+				<i id="plus" class="fa fa-plus" aria-hidden="true"></i></li>
+			<!--OPCIONES ESTADISTICAS -->
+			<ul id="sub-estadi" class="sub-menu3">
+				<a class="enlaces" href="gastos_ingreso.html"><li class="o-s">Gastos e Ingreso</li></a>
+				<a class="enlaces" href="javascript:void(0)">
+				<li class="o-ps">Gráficos</li></a>
+				<a class="enlaces" href="comparar.html"><li class="o-s">Comparativos</li></a>
+			</ul>
+			<li id="cerrar_sesion" class="o-p"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar sesión</li>
+		</ul>
+	</div>
+<div class="informacion">
+	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Cuentas <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="efectivo.html">Efectivo</a></div>
+	<div class="contenido-principal">
+		<label id="titulo-efectivo">El efectivo que tienes disponible actualmente es de:</label><br><br><br><br>
+		<label id="efectivo">0.00 $</label>
+	</div>
+</div>
+<div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
+</body>
+<script type="text/javascript" src="../js/menu_principal.js"></script>
+<script type="text/javascript" src="../js/cerrar.js"></script>
+</html>
