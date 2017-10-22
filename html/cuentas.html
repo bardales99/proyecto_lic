@@ -48,52 +48,23 @@
 		</ul>
 	</div>
 <div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="cuentas.html">Cuentas</a></div>
+	<div style="margin-top: 0.1%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="cuentas.html">Cuentas</a></div>
 	<div class="contenido-cuentas">
 		<label id="titulo-cuentas">Estas son tus cuentas registradas:</label><br><br>
 
 		<table class="cuents"><thead><tr>
-                <th>Banco</th>
-                <th>Numero de cuenta</th>
-                <th>Saldo</th>
+                <th class="th-Cuentas">Banco</th>
+                <th class="th-Cuentas">Numero de cuenta</th>
+                <th class="th-Cuentas">Saldo</th>
         </tr></thead><tbody id="tabla-cuents"></tbody>
     </table>
     <br>
-    <button id="btn-cuentas">Agregar una nueva cuenta</button>
-    <div id="form-se" class="form">
-                  <h2>Agregar otra cuenta</h2><br>
-
-            <label class="lbl-input-datos" for="inputext1">Efectivo disponible</label><br><br>
-            <input type="text" placeholder="Ingrese el efectivo" id="inputext1" name="username" required><br><br>
-
-            <label class="lbl-input-datos" for="inputext2">Cuentas bancarias</label><br><br>
-
-            <div id="cuentas" class="cuentas">
-        <div>
-            <label class="lbl-input-datos" for="banco">Banco</label>
-            <input placeholder="Ingrese el nombre del banco" type="text" name="banco" id="banco" />
-        </div>
-        <div>
-            <label class="lbl-input-datos" for="Ncuenta"># de Cuenta</label>
-            <input placeholder="Ingrese el # de la cuenta" type="text" name="Num_cuenta" id="Ncuenta" />
-        </div>
-        <div>
-            <label class="lbl-input-datos" for="saldo">Saldo Actual</label>
-            <input type="text" placeholder="Ingrese su saldo" name="saldo" id="saldo" />
-        </div>
-        <br>
-        <div>
-            <button type="button" class="agregarC" id="agregar"> + Agregar  cuenta</button>
-        </div>
-            </div>
-      </div>
-
+    <a class="btn-cu" href="agregar_cuentas.html"><button id="btn-cuentas">Agregar una nueva cuenta</button></a>
 	</div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/formsesiones.js"></script>
+<script type="text/javascript" src="../js/innerCuentas.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

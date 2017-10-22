@@ -8,9 +8,10 @@
       <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
       <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General.css">
 </head>	
 <body>
-	<div class="menu-principal">
+	<div style="margin-left: 0.8%;" class="menu-principal">
 		<div class="content-main"><center><img class="img-logo" src="../img/logout.PNG"><br>eWallet</center>
 		</div><br>
 		<ul>
@@ -42,49 +43,57 @@
 				<a class="enlaces" href="gastos_ingreso.html"><li class="o-s">Gastos e Ingreso</li></a>
 				<a class="enlaces" href="javascript:void(0)">
 				<li class="o-ps">Gráficos</li></a>
+				
 				<a class="enlaces" href="comparar.html"><li class="o-s">Comparativos</li></a>
 			</ul>
 			<li id="cerrar_sesion" class="o-p"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar sesión</li>
 		</ul>
 	</div>
-<div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Estadisticas <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="gastos_ingreso.html">Gastos e Ingresos</a></div>
-	<div class="conx contenido-principal">
-		<label id="titulo-balance">Período de tiempo:</label><br><br>
-		<select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">Mensuales</option>
-                  <option id="cuentaA" value="cuenta">Anuales</option>
-                  <option id="tarjetaC" value="tarjeta">Periodo</option>
-        </select><br><br>
-        <div id="mensual">
-        <label id="titulo-balance">Período de tiempo > Mensual</label><br>
-        <select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">Octubre</option>
-        </select><br>
+<div style="margin-left: 24.8%;" class="informacion">
+	<div style="margin-top: 0.1%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="tarjetascredito.html">Tarjetas de crédito</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="javascript:void(0)"> Agregar Tarjeta de crédito</a></div>
+	<div class="contenido-cuentas">
+    <br>
+    <div style="margin-top: -2%;" id="form-tar" class="frm-se  form">
+                  <h2>Agregar otra tarjeta</h2><br>
+
+            <label class="lbl-input-datos" for="inputext1">Banco</label>
+            <input type="text" placeholder="Ingrese el nombre del banco" id="inputext1" name="banco" required>
+
+            <label class="lbl-input-datos" for="inputext2">No de tarjeta</label>
+            <input type="text" placeholder="Ingrese el # de tarjeta" id="inputext2" name="#Tarjeta" required>
+        <div>
+            <label class="lbl-input-datos" for="saldo">Saldo actual</label>
+            <input placeholder="Ingrese el saldo de la tarjeta" type="text" name="banco" id="saldo" />
         </div>
-        <div id="anual">
-        <label id="titulo-balance">Período de tiempo > Anual</label><br>
-        <select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">2017</option>
-        </select><br>
+        <div>
+            <label class="lbl-input-datos" for="interes">% de interes anual</label>
+            <input placeholder="Ingrese el % de interes anual" type="text" name="interes" id="interes" />
         </div>
-        <div id="periodo">
-        <label id="titulo-balance">Intervalo de tiempo:</label><br>
-        <label class="lbl-input-datos" for="inputext1">Fecha de inicio</label><br>
-            <input type="date" id="inputext1" name="username" required>
-        <label class="lbl-input-datos" for="inputext2"><br>Fecha final</label>
-            <input type="date" id="inputext2" name="username" required>
-            </div>
-        <label id="titulo-balance">Estadisticas de gastos:</label><br><br>
-        <div id="mostrar" class="mostrar-datos">
-        	<img src="../img/grafi1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	<img src="../img/grafi1.jpg">
+        <div>
+            <label class="lbl-input-datos" for="fecha">Fecha de pago</label>
+            <input type="text" maxlength="2" minlength="1" pattern="[0-9]{1-2}" placeholder="Ingrese la fecha de pago de la tarjeta" id="fecha" name="fecha" required><br>
         </div>
+        <br>
+        <div>
+            <button type="button" class="agregarC" id="agregar"> + Agregar  tarjeta</button>
+        </div>
+      </div>
+
 	</div>
 </div>
-<div class="footer" id="fot"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
+<!-- Modal -->
+<center>
+<div id="modal-show" class="modal-show">
+      <div class="cerrar"><i id="cerrar" class="fa fa-times-circle" aria-hidden="true"></i></div>
+      <div id="success-modal" class="content-modal">
+           <label id="lblinner"> Revisa, tus datos no son correctos.</label>
+      </div>      
+</div>
+</center>
+
+<div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/periodos.js"></script>
+<script type="text/javascript" src="../js/innerTarjetas.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

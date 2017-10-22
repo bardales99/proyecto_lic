@@ -8,9 +8,10 @@
       <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
       <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General.css">
 </head>	
 <body>
-	<div class="menu-principal">
+	<div style="margin-left: 0.01%;" class="menu-principal">
 		<div class="content-main"><center><img class="img-logo" src="../img/logout.PNG"><br>eWallet</center>
 		</div><br>
 		<ul>
@@ -47,12 +48,28 @@
 			<li id="cerrar_sesion" class="o-p"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar sesión</li>
 		</ul>
 	</div>
-<div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Configuraciones <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="tipo_pago.html">Tipo de pago predefinido</a></div>
-	<div class="contenido-principal">
-		<label id="titulo-tipos">Selecciones su forma de pago:</label>
+<div style="margin-left: 24%;" class="informacion">
+	<div style="margin-top: 0.1%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="ingresos.html">Ingresos</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="javascript:void(0)"> Agregar ingreso</a></div>
+	<div class="contenido-cuentas">
+    <div style="margin-top: 1%;" id="form-in" class="frm-se form">
+                  <h2>Agregar ingreso</h2><br>
 
-		<select id="inputbox" name="pagos" required>
+            <label class="lbl-input-datos" for="inputext1">Fecha</label>
+            <input type="date" id="inputext1" name="Fecha" required>
+
+            <label class="lbl-input-datos" for="inputext2">Motivo</label>
+            <input pattern="[A-Za-z]{2-100}" type="text" placeholder="Ingrese el motivo" id="inputext2" name="Motivo" required>
+
+            <div id="cuentas" class="cuentas">
+        <div>
+            <label class="lbl-input-datos" for="monto">Monto</label>
+            <input pattern="[0-9]{1-10}" placeholder="Ingrese el monto" type="text" name="Monto" id="monto" />
+        </div>
+
+
+        <div>
+            <label class="lbl-input-datos" for="Ncuenta">Cuenta</label>
+            <select id="inputbox2" name="pagos" required>
                   <option value="Efectivo">Efectivo</option>
                   <option id="cuentaA" value="cuenta">Cuenta de ahorro</option>
                   <option id="tarjetaC" value="tarjeta">Tarjeta de crédito</option>
@@ -61,22 +78,40 @@
     <div id="selectC">
     <label id="titulo-tipos">Seleccione la cuenta:</label><br>
     <select id="selcuenta" name="cuenta_ahorro">
-                  <option value="Cuenta">Cuenta de ahorro 1</option>
-                  <option value="Cuenta">Cuenta de ahorro 2</option>
+     <!-- Elementos a generar --> 
     </select>
     </div>
     <div id="selecT">
-   <label id="titulo-tipos">Seleccione la tarjeta:</label><br>
+   <label id="ty">Seleccione la tarjeta:</label><br>
     <select id="seltarjeta" name="tarjeta_credito">
-                  <option value="Tarjeta1">Tarjeta 1</option>
-                  <option value="Tarjeta2">Tarjeta 2</option>
+     <!-- Elementos a generar -->
     </select>
     </div>
+        </div>
+
+        <br>
+        <div>
+            <button type="button" class="agregarC" id="agregar"> + Agregar ingreso</button>
+        </div>
+            </div>
+      </div>
+
 	</div>
 </div>
-<div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
+
+<!-- Modal -->
+<center>
+<div id="modal-show" class="modal-show">
+      <div class="cerrar"><i id="cerrar" class="fa fa-times-circle" aria-hidden="true"></i></div>
+      <div id="success-modal" class="content-modal">
+           <label id="lblinner"> Revisa, tus datos no son correctos.</label>
+      </div>      
+</div>
+</center>
+<div id="foo" class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/formtipo.js"></script>
+<script type="text/javascript" src="../js/ingresos.js"></script>
+<script type="text/javascript" src="../js/innerIngresos.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

@@ -48,7 +48,7 @@
 		</ul>
 	</div>
 <div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="gastos.html">Gastos</a></div>
+	<div style="margin-top: 0.01%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="gastos.html">Gastos</a></div>
 
 	<div class="contenido-cuentas">
 		<label id="titulo-cuentas">Lista de gastos:</label><br><br>
@@ -57,67 +57,18 @@
                 <th class="tarjeta-th">Fecha</th>
                 <th class="tarjeta-th">Motivo</th>
                 <th class="tarjeta-th">Monto</th>
-                <th class="tarjeta-th">Cuenta usada</th>
                 <th class="tarjeta-th">Tipo de pago</th>
+                <th class="tarjeta-th">Cuenta usada</th>
                 
-        </tr></thead><tbody id="tabla-ingresos"></tbody>
+        </tr></thead><tbody id="tabla-gastos"></tbody>
     </table>
     <br>
-    <button id="btn-gas">Agregar un nuevo gasto</button>
-    <div id="form-in" class="form">
-                  <h2>Agregar gasto</h2><br>
-
-            <label class="lbl-input-datos" for="inputext1">Fecha</label>
-            <input type="date" id="inputext1" name="username" required>
-
-            <label class="lbl-input-datos" for="inputext2">Motivo</label>
-            <input type="text" placeholder="Ingrese el motivo" id="inputext2" name="username" required>
-
-            <div id="cuentas" class="cuentas">
-        <div>
-            <label class="lbl-input-datos" for="banco">Monto</label>
-            <input placeholder="Ingrese el monto" type="text" name="banco" id="banco" />
-        </div>
-        <div>
-            <label class="lbl-input-datos" for="Ncuenta">Cuenta</label>
-            <input placeholder="Ingrese el nombre de la cuenta" type="text" name="Num_cuenta" id="Ncuenta" />
-        </div>
-        <div>
-           <select id="inputbox" name="gas_ingr" required>
-                  <option value="Pago de celular">Pago de celular</option>
-                  <option value="Pago de luz electricaa">Pago de luz electricaa</option>
-                  <option value="Pago de agua">Pago de agua</option>
-                  <option value="Pago de casa/alquiler">Pago de casa/alquiler</option>
-                  <option value="Pago de cable">Pago de cable</option>
-                  <option value="Pago de internet">Pago de internet</option>
-                  <option value="Pago de educacion">Pago de educacion</option>
-                  <option value="Supermercado">Supermercado</option>
-                  <option value="Cine">Cine</option>
-                  <option value="Discoteca">Discoteca</option>
-                  <option value="Teatro">Teatro</option>
-                  <option value="Ropa">Ropa</option>
-                  <option value="Restaurante">Restaurante</option>
-                  <option value="Tecnologia">Tecnologia</option>
-                  <option value="Mascota">Mascota</option>
-                  <option value="Gasolina">Gasolina</option>
-                  <option value="Reparaciones">Reparaciones</option>
-        </select><br><br>
-        <label class="lbl-input-datos" for="inputext2">Añadir motivo</label>
-            <input type="text" placeholder="Ingrese un motivo" id="inputext2" name="username" required>
-        </div>
-        <br>
-        <div>
-            <button type="button" class="agregarC" id="agregar"> + Agregar gasto</button>
-        </div>
-            </div>
-      </div>
-
+    <a class="btn-cu" href="agregar_gastos.html"><button id="btn-gas">Agregar un nuevo gasto</button></a>
 	</div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/formgastos.js"></script>
+<script type="text/javascript" src="../js/genGastos.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

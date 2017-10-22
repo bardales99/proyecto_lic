@@ -4,6 +4,7 @@
 	<title>eWallet</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/Estilo_General.css">
 	<link rel="stylesheet" type="text/css" href="../css/Estilo_General_app.css">
       <link rel="shortcut icon" type="image/x-icon" href="../img/logout.ico">
       <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
@@ -48,43 +49,50 @@
 		</ul>
 	</div>
 <div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Estadisticas <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="gastos_ingreso.html">Gastos e Ingresos</a></div>
-	<div class="conx contenido-principal">
-		<label id="titulo-balance">Período de tiempo:</label><br><br>
-		<select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">Mensuales</option>
-                  <option id="cuentaA" value="cuenta">Anuales</option>
-                  <option id="tarjetaC" value="tarjeta">Periodo</option>
-        </select><br><br>
-        <div id="mensual">
-        <label id="titulo-balance">Período de tiempo > Mensual</label><br>
-        <select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">Octubre</option>
-        </select><br>
+	<div style="margin-top: 0.1%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="cuentas.html">Cuentas</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="javascript:void(0)"> Agregar cuenta</a></div>
+	<div class="contenido-cuentas">
+
+    <br>
+    <div id="form-se" class="frm-se form">
+                  <h2>Agregar otra cuenta</h2><br>
+
+            <label class="lbl-input-datos" for="inputext2">Cuentas bancarias</label><br><br>
+
+            <div id="cuentas" class="cuentas">
+        <div>
+            <label class="lbl-input-datos" for="banco">Banco</label>
+            <input placeholder="Ingrese el nombre del banco" type="text" name="banco" id="banco" />
         </div>
-        <div id="anual">
-        <label id="titulo-balance">Período de tiempo > Anual</label><br>
-        <select id="inputbox" name="gas_ingr" required>
-                  <option value="Efectivo">2017</option>
-        </select><br>
+        <div>
+            <label class="lbl-input-datos" for="Ncuenta"># de Cuenta</label>
+            <input placeholder="Ingrese el # de la cuenta" type="text" name="Num_cuenta" id="Ncuenta" />
         </div>
-        <div id="periodo">
-        <label id="titulo-balance">Intervalo de tiempo:</label><br>
-        <label class="lbl-input-datos" for="inputext1">Fecha de inicio</label><br>
-            <input type="date" id="inputext1" name="username" required>
-        <label class="lbl-input-datos" for="inputext2"><br>Fecha final</label>
-            <input type="date" id="inputext2" name="username" required>
+        <div>
+            <label class="lbl-input-datos" for="saldo">Saldo Actual</label>
+            <input type="text" placeholder="Ingrese su saldo" name="saldo" id="saldo" />
+        </div>
+        <br>
+        <div>
+            <button type="button" class="agregarC" id="agregar"> + Agregar  cuenta</button>
+        </div>
             </div>
-        <label id="titulo-balance">Estadisticas de gastos:</label><br><br>
-        <div id="mostrar" class="mostrar-datos">
-        	<img src="../img/grafi1.jpg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	<img src="../img/grafi1.jpg">
-        </div>
+      </div>
+
 	</div>
 </div>
-<div class="footer" id="fot"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
+<!-- Modal -->
+<center>
+<div id="modal-show" class="modal-show">
+      <div class="cerrar"><i id="cerrar" class="fa fa-times-circle" aria-hidden="true"></i></div>
+      <div id="success-modal" class="content-modal">
+           <label id="lblinner"> Revisa, tus datos no son correctos.</label>
+      </div>      
+</div>
+</center>
+
+<div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/periodos.js"></script>
+<script type="text/javascript" src="../js/innerCuentas.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

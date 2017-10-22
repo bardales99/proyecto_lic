@@ -48,7 +48,7 @@
 		</ul>
 	</div>
 <div class="informacion">
-	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="ingresos.html">Ingresos</a></div>
+	<div style="margin-top: 0.1%;" class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="ingresos.html">Ingresos</a></div>
 	<div class="contenido-cuentas">
 		<label id="titulo-cuentas">Esta es la lista de tus ingresos:</label><br><br>
 
@@ -57,46 +57,17 @@
                 <th class="tarjeta-th">Motivo</th>
                 <th class="tarjeta-th">Monto</th>
                 <th class="tarjeta-th">Cuenta</th>
-                <th class="tarjeta-th">No de cuenta</th>
-        </tr></thead><tbody id="tabla-ingresos"></tbody>
+                <th class="tarjeta-th">N<sup>o</sup> de cuenta</th>
+        </tr></thead><tbody id="tabla-ingr"></tbody>
     </table>
     <br>
-    <button id="btn-ingre">Agregar un nuevo ingreso</button>
-    <div id="form-in" class="form">
-                  <h2>Agregar ingreso</h2><br>
-
-            <label class="lbl-input-datos" for="inputext1">Fecha</label>
-            <input type="date" id="inputext1" name="username" required>
-
-            <label class="lbl-input-datos" for="inputext2">Motivo</label>
-            <input type="text" placeholder="Ingrese el motivo" id="inputext2" name="username" required>
-
-            <div id="cuentas" class="cuentas">
-        <div>
-            <label class="lbl-input-datos" for="banco">Monto</label>
-            <input placeholder="Ingrese el monto" type="text" name="banco" id="banco" />
-        </div>
-        <div>
-            <label class="lbl-input-datos" for="Ncuenta">Cuenta</label>
-            <input placeholder="Ingrese el nombre de la cuenta" type="text" name="Num_cuenta" id="Ncuenta" />
-        </div>
-        <div>
-            <label class="lbl-input-datos" for="saldo">No de cuenta</label>
-            <input type="text" placeholder="Ingrese el # de la cuenta" name="saldo" id="saldo" />
-        </div>
-        <br>
-        <div>
-            <button type="button" class="agregarC" id="agregar"> + Agregar ingreso</button>
-        </div>
-            </div>
-      </div>
+    <a class="btn-cu" href="agregar_ingreso.html"><button id="btn-ingre">Agregar un nuevo ingreso</button></a>
 
 	</div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
-<script type="text/javascript" src="../js/formingre.js"></script>
+<script type="text/javascript" src="../js/genIngresos.js"></script>
 <script type="text/javascript" src="../js/cerrar.js"></script>
 </html>

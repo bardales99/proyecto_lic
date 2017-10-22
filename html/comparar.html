@@ -49,17 +49,17 @@
 	</div>
 <div class="informacion">
 	<div class="titulo-principal"><a class="header-titulos" href="menusesion.html">eWallet</a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> Estadisticas <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a class="header-titulos" href="comparar.html">Comparación de datos</a></div>
-	<div class="contenido-principal">
+	<div class="conx contenido-principal">
 		<label id="titulo-balance">Seleccione una opción:</label><br><br>
 
 		<label id="titulo-balance">Seleccione un año:</label><br>
-		<select id="inputbox" name="gas_ingr" required>
+		<select id="compar" name="gas_ingr" required>
                   <option value="2017">2017</option>
                   <option value="2016">2016</option>
                   <option value="2015">2015</option>
-        </select><br><br>
+        </select><button id="ver_datos" class="btn-ver">Ver Grafica</button><br><br>
         <label id="titulo-balance">Seleccione el rango de meses:</label><br>
-		<select id="inputbox" name="gas_ingr" required>
+		<select id="compar" name="gas_ingr" required>
                   <option value="Enero">Enero</option>
                   <option value="Febrero">Febrero</option>
                   <option value="Marzo">Marzo</option>
@@ -72,7 +72,7 @@
                   <option value="Octubre">Octubre</option>
                   <option value="Noviembre">Noviembre</option>
                   <option value="Diciembre">Diciembre</option>
-        </select>&nbsp;<select id="inputbox" name="gas_ingr" required>
+        </select>&nbsp;<select id="compar" name="gas_ingr" required>
                   <option value="Enero">Enero</option>
                   <option value="Febrero">Febrero</option>
                   <option value="Marzo">Marzo</option>
@@ -85,24 +85,24 @@
                   <option value="Octubre">Octubre</option>
                   <option value="Noviembre">Noviembre</option>
                   <option value="Diciembre">Diciembre</option>
-        </select>
+        </select><button id="ver_datos" class="btn-ver">Ver Grafica</button>
         <br><br>
         <label id="titulo-balance">Seleccione un rango de años:</label><br>
-		<select id="inputbox" name="gas_ingr" required>
+		<select id="compar" name="gas_ingr" required>
                   <option value="2017">2017</option>
                   <option value="2016">2016</option>
                   <option value="2015">2015</option>
                   <option value="2014">2014</option>
                   <option value="2013">2013</option>
                   <option value="2012">2012</option>
-        </select>&nbsp;<select id="inputbox" name="gas_ingr" required>
+        </select>&nbsp;<select id="compar" name="gas_ingr" required>
 <option value="2017">2017</option>
                   <option value="2016">2016</option>
                   <option value="2015">2015</option>
                   <option value="2014">2014</option>
                   <option value="2013">2013</option>
                   <option value="2012">2012</option>
-        </select>
+        </select><button id="ver_datos" class="btn-ver">Ver Grafica</button>
        <div id="mostrar" class="mostrar-datos">
         	<img title="Comparativo ingresos" class="img-gr" src="../img/grafi1.jpg">&nbsp;&nbsp;
         	<img title="Comparativo gastos" class="img-gr" src="../img/grafi1.jpg">&nbsp;&nbsp;
@@ -110,7 +110,7 @@
         </div>
 	</div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="footer"><i class="fa fa-copyright" aria-hidden="true"></i> eWallet</div>
 </body>
 <script type="text/javascript" src="../js/menu_principal.js"></script>
