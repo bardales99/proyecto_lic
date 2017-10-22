@@ -10,6 +10,8 @@
 	var successM = document.getElementById('success-modal');
 	var lblalert = document.getElementById('lblinner');
 	var cerrar = false;
+	var usuarios = [];
+	var count = 0;
 //se inicializa el proceso al cargar la pagina
 if(window.addEventListener){
  	window.addEventListener("load", iniciar, false);
@@ -19,7 +21,7 @@ else if(window.attachEvent){
 }
 //se inicializa el proceso del registro
 function iniciar(){
-	sessionStorage.clear();
+	localStorage.clear();
 	var boton= document.getElementById('btnenviar');
 	if(boton.addEventListener){
 		boton.addEventListener("click",function(){
@@ -68,10 +70,22 @@ function User(nombres, apellidos, email, password, password2, departamento, muni
 		var edad= Math.floor(((fechaact-fechaNac)/(1000*60*60*24)/365));
 		//se verifica con un if si todo es true y la longitud es mayor a 0
 		if((nombs.test(nombres) && nombres.length!=0) && ((apells.test(apellidos) && apellidos.length!=0)) && ((corr.test(email) && email.length!=0)) && ((pass.test(password) && password.length!=0)) && ((password===password2)) && ((depar.includes(departamento))) && ((municipio.length!=0 && municipio.length!=" ")) && ((colonia.length!=0 && colonia.length!=" ")) && ((calle.length!=0 && calle.length!=" ")) && ((casa.length!=0 && casa.length!=" ")) && ((du.test(dui))) && ((respuesta.length!=0 && respuesta.length!=" ")) && ((ni.test(nit))) && ((num.test(numero))) && (edad>=18)){
-			sessionStorage.setItem('Usuario', email);
-			sessionStorage.setItem('Password', password);
-			sessionStorage.setItem('Respuesta', respuesta);
-			sessionStorage.setItem('Pregunta', pre);
+		
+		//LocalStorage
+		var user = {
+			Usuario: email,
+			Password: password,
+			Respuesta: respuesta,
+			Pregunta: pre
+		};
+		var usuarioGuardado = JSON.stringify(user);
+		localStorage.setItem("UsuarioR", usuarioGuardado);
+		var usuarioStr = localStorage.getItem("UsuarioR");
+		var usuarioStr = JSON.parse(usuarioStr);
+		usuarios[count] = usuarioStr;
+		count +=1;
+		//Fin LocalStorage
+
 			//se mmuestra la modal dependiendo del rsultado
 			contRegistro.style.display = "none";
 			modal.style.display = 'block';

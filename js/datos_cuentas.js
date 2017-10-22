@@ -10,6 +10,7 @@ var modal = document.getElementById('modal-show');
     var successM = document.getElementById('success-modal');
     var lblalert = document.getElementById('lblinner');
     var cerrar = false;
+    var count = 0;
 //se inicializa el proceso al cargar la pagina
 if(window.addEventListener){
     window.addEventListener("load", iniciar, false);
@@ -92,17 +93,35 @@ function btnEditar_Click(event) {
     txtSaldo.value = this.elemento.saldo;
     cambiar(this.elemento.banco,this.elemento.numcuenta,this.elemento.saldo);
 }
-//funcion para el sessionStorage
+//funcion para el localStorage
 function iniciar(){
     var ingresar= document.getElementById('btn-enviar');
     if(ingresar.addEventListener){
         ingresar.addEventListener("click",function(){
             for (var i = 0; i < datos.length; i++) {
         var elemento = datos[i];
-   sessionStorage.setItem('Banco',elemento.banco);
-    sessionStorage.setItem('#Cuenta',elemento.numcuenta);
-    sessionStorage.setItem('Saldo',elemento.saldo);
+        //localStorage
+    //efectivo
+    var efectivo = document.getElementById('inputext1').value;
+    var efecUser = localStorage.getItem("UsuarioR");
+    var efecUser = JSON.parse(efecUser);
+    var NombreUsuario = efecUser.Usuario
+
+    var ObjEfectivo = {
+        Efectivo_Balance: efectivo,
+        User: NombreUsuario
+    };
+    var efectivoGuardado = JSON.stringify(ObjEfectivo);
+    localStorage.setItem("Balance", efectivoGuardado);
+    var efectivoStr = localStorage.getItem("Balance");
+    var efectivoStr = JSON.parse(efectivoStr);
+    //fin localStorage
 }
+    aggingreso();
+    agasto();
+    motivoN();
+    aggtarjetas();
+    aggbalanceG();
 window.location = 'menusesion.html';
         },false);
 }
@@ -115,7 +134,7 @@ function btnAgregar_Click(event) {
     var saldo = txtSaldo.value || '';
 
     if (!banco || !banco.trim().length) {
-        contSes.style.display = "none";
+    contSes.style.display = "none";
     modal.style.display = 'block';
     cont2.style.marginTop = '9.5%';
     capaN.style.opacity = '0';
@@ -186,6 +205,11 @@ function btnAgregar_Click(event) {
         var td3 = document.createElement('td');
         var td4 = document.createElement('td');
 
+        td1.className = "tdInicio";
+        td2.className = "tdInicio";
+        td3.className = "tdInicio";
+        td4.className = "tdInicio";
+
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
@@ -207,8 +231,98 @@ function btnAgregar_Click(event) {
         nuevoBtn.elemento = elemento;
         td4.appendChild(nuevoBtn);
         }
+        //localStorage del banco
+    var userB = {
+        Banco: banco,
+        NumCuenta: numcuenta,
+        SaldoCuenta: saldo,
+        Id: count
+    };
+    var userBguardado = JSON.stringify(userB);
+    localStorage.setItem("Banco # " + count,userBguardado);
+    var userBString = localStorage.getItem("Banco # " + count);
+    var userBString = JSON.parse(userBString);
+    count += 1;
+    //localStorage
+    aggcuentas();
     }
 //se llama a la funcion de agregar
 btnAgregar.addEventListener('click', btnAgregar_Click);
+function aggcuentas(){
+    var efecUser = localStorage.getItem("UsuarioR");
+    var efecUser = JSON.parse(efecUser);
+    var NombreUsuario = efecUser.Usuario
 
+    var CuentasCount = {
+        NumCuentaGen: count,
+        User: NombreUsuario
+    }
+    var Account = JSON.stringify(CuentasCount);
+    localStorage.setItem("#CuentasGeneradas", Account);
+}
+function aggtarjetas(){
+    var count = 0;
+    var tarjeUser = localStorage.getItem("UsuarioR");
+        var tarjeUser = JSON.parse(tarjeUser);
+        var NombreUsuario = tarjeUser.Usuario
+
+        var TarjetasCount = {
+            NumTarjetasGen: count,
+            User: NombreUsuario
+        }
+        var Account = JSON.stringify(TarjetasCount);
+        localStorage.setItem("#TarjetasGeneradas", Account);
+    }
+function motivoN(){
+    var count = 0;
+        var efecUser = localStorage.getItem("UsuarioR");
+        var efecUser = JSON.parse(efecUser);
+        var NombreUsuario = efecUser.Usuario
+
+        var MotivosCount = {
+            NumMotivosGen: count,
+            User: NombreUsuario
+        }
+        var Account = JSON.stringify(MotivosCount);
+        localStorage.setItem("#MotivosGenerados", Account);
+    }
+function agasto(){
+        var count = 0;
+        var efecUser = localStorage.getItem("UsuarioR");
+        var efecUser = JSON.parse(efecUser);
+        var NombreUsuario = efecUser.Usuario
+
+        var GastosCount = {
+            NumGastosGen: count,
+            User: NombreUsuario
+        }
+        var Account = JSON.stringify(GastosCount);
+        localStorage.setItem("#GastosGenerados", Account);
+    }
+function aggingreso(){
+    var count = 0;
+        var efecUser = localStorage.getItem("UsuarioR");
+        var efecUser = JSON.parse(efecUser);
+        var NombreUsuario = efecUser.Usuario
+
+        var CuentasCount = {
+            NumIngresosGen: count,
+            User: NombreUsuario
+        }
+        var Account = JSON.stringify(CuentasCount);
+        localStorage.setItem("#IngresosGenerados", Account);
+    }
+function aggbalanceG(){
+    var balan = 0;
+    var efecUser = localStorage.getItem("UsuarioR");
+    var efecUser = JSON.parse(efecUser);
+    var NombreUsuario = efecUser.Usuario
+
+    var ObjBalance = {
+        BalanceGeneral: balan,
+        User: NombreUsuario
+    };
+    var BlncGuardado = JSON.stringify(ObjBalance);
+    localStorage.setItem("BalanceIngresosGastos", BlncGuardado);
+}
 })();

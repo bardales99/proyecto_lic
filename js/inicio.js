@@ -30,12 +30,14 @@ function sesion(email, password){
 	this.email= email;
 	this.password=password;
 	this.comprobar= function(){
-		var user= sessionStorage.getItem("Usuario");
-		var pass= sessionStorage.getItem("Password");
+		var usuarioStr = localStorage.getItem("UsuarioR");
+		var usuarioStr = JSON.parse(usuarioStr);
+		var user= usuarioStr.Usuario;
+		var pass= usuarioStr.Password;
 		var btncerrarmodal = document.getElementById('cerrar');
 		//se verifica si es correcto todo
 		if((email===user) && pass===password){
-			if (sessionStorage.getItem("Banco")){
+			if (localStorage.getItem("Balance")){
 				//segun si es true o false el if se ejecuta la alert
 	btncerrarmodal.onclick = function(){
 		window.location= "menusesion.html";

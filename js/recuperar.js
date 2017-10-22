@@ -41,10 +41,13 @@ function recuperacion(email, respuesta){
 	this.respuesta=respuesta;
 	this.comprobar= function(){
 		var pregunta= document.recuperar.pregunseguri.options[recuperar.pregunseguri.selectedIndex].text;
-		var user= sessionStorage.getItem("Usuario");
-		var pregun= sessionStorage.getItem("Pregunta");
-		var respu= sessionStorage.getItem("Respuesta");
-		var pass= sessionStorage.getItem("Password");
+		var usuarioStr = localStorage.getItem("UsuarioR");
+		var usuarioStr = JSON.parse(usuarioStr);
+		var user= usuarioStr.Usuario;
+		var pregun= usuarioStr.Pregunta;
+		var respu= usuarioStr.Respuesta;
+		var pass= usuarioStr.Password;
+		console.log(user + pregun + respu + pass);
 		var lblalert = document.getElementById('lblinner');
 		if((email===user) && (pregunta===pregun) && (respu===respuesta)){
 			//si todo es correcto despues de la verificacion se muestra la contra

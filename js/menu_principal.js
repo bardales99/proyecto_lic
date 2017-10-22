@@ -1,14 +1,5 @@
 (()=>{
-	//se inicializa el proceso al cargar la pagina
-	if(window.addEventListener){
- 	window.addEventListener("load", iniciar, false);
-}
-else if(window.attachEvent){
- 	window.attachEvent("onload", iniciar);
-}
-function iniciar(){
-	saldo.innerHTML= "$ "+cuentas
-}
+
 //se declaran las variables de los botones del menu
 	var btnCuentas = document.getElementById('cuentas');
 	var contCuentas = document.getElementById('sub-cuentas');
@@ -16,9 +7,9 @@ function iniciar(){
 	var contEstad = document.getElementById('sub-estadi');
 	var btnConfi = document.getElementById('configuraciones');
 	var btnEstadis = document.getElementById('estadisticas');
-	var saldo= document.getElementById('balance');
-	var cuentas= sessionStorage.getItem("Saldo");
+
 	var cuenta = false;
+
 	//se muestran los datos segun se presione un boton
 	btnCuentas.onclick = function(){
 		if (cuenta == false){
