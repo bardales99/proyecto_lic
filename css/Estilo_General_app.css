@@ -1,3 +1,4 @@
+
 *{
 	padding: 0;
 	margin: 0;
@@ -24,7 +25,7 @@ body{
 	width: 20%;
 	font-size: 1.9em;
 	background-color: #f1f1f1;
-	height: 585px;
+	height: 600px;
 	overflow-y: scroll;
 	z-index: -1;
 	overflow-x: hidden;
@@ -230,13 +231,13 @@ ul{
 	width: 100%;
 }
 .tarjeta-th{
-	color: #363636;
+	color: white;
 	font-family: rob;
 	font-size: 1.1em;
 	padding: 1%;
-	padding-left: 2%;
-	background-color: #6FA3A9;
-	padding-right: 2%;
+	padding-left: 1%;
+	background-color: #4A4A4A;
+	padding-right: 1%;
 	font-weight: bold;
 }
 .ingresos{
@@ -245,11 +246,14 @@ ul{
 	color: #363636;
 	width: 100%;
 }
+.conx{
+	margin-top: 2%;
+}
 #form-tar{
 	background-color: white;
 	padding: 2%;
 	font-family: rob;
-	display: none;
+	display: block;
 }
 .lbl-input-sesion{
 	font-family: sego;
@@ -276,7 +280,7 @@ ul{
 	transition: 0.4s all linear;
 	border: 1px solid black;
 }
-#banco,#inputext1,#inputext2,#Ncuenta,#saldo{
+#banco,#monto,#inputext1,#inputext2,#Ncuenta,#saldo,#interes,#fecha{
 	border: 1px solid gray;
 	padding: 1%;
 	margin: 1%;
@@ -286,16 +290,26 @@ ul{
 	z-index: -10;
 }
 th{
-	color: #363636;
+	color: white;
 	font-family: rob;
 	font-size: 1.3em;
 	padding: 1%;
 	padding-left: 11%;
-	background-color: #6FA3A9;
+	background-color: #4A4A4A;
 	padding-right: 11%;
 	font-weight: bold;
 }
-td{
+.th-Cuentas{
+	color: white;
+	font-family: rob;
+	font-size: 1.2em;
+	padding: 0.7%;
+	padding-left: 10%;
+	background-color: #363636;
+	padding-right: 10%;
+	font-weight: bold;
+}
+.tdInicio{
 	color: #363636;
 	font-family: rob;
 	font-size: 1.2em;
@@ -313,27 +327,64 @@ td{
   display: none;
   box-shadow:0 4px 10px 4px rgba(19,35,47, 0.3);
 }
+.frm-se {
+  background-color: white;
+  padding: 20px;
+  max-width:500px;
+  margin: -15px auto;
+  border-radius: 1px;
+  display: block;
+  box-shadow:0 4px 10px 4px rgba(19,35,47, 0.3);
+}
+.frm-gas{
+  background-color: white;
+  padding: 20px;
+  max-width:500px;
+  margin: -45px auto;
+  border-radius: 1px;
+  display: block;
+  box-shadow:0 4px 10px 4px rgba(19,35,47, 0.3);
+}
 #btn-cuentas{
 	padding: 1.5%;
 	font-size: 1.2em;
 	font-family: rob;
+	margin-left: 3%;
 	border-style: none;
 	background-color: #363636;
 	color: white;
 	cursor: pointer;
 	transition: 0.3s all linear;
 }
+.btn-cu{
+	margin-left: 34%;
+}
 #btn-cuentas:hover{
 	transition: 0.3s all linear;
 	background-color: rgba(54,54,54, 0.8);
 }
-#inputbox{
+#inputbox,#inputbox2,#motivo{
 	border: 1px solid gray;
 	padding: 1%;
 	margin: 1%;
 	font-size: 1em;
 	font-family: sego;
 	width: 95%;
+	z-index: -10;
+}
+.btn-ver{
+	border-style: none;
+	padding: 1.3%;
+	font-size: 1em;
+	font-family: sego;
+}
+#compar{
+	border: 1px solid gray;
+	padding: 1%;
+	margin: 1%;
+	font-size: 1em;
+	font-family: sego;
+	width: 20%;
 	z-index: -10;
 }
 #selcuenta,#seltarjeta{
@@ -345,6 +396,12 @@ td{
 	display: none;
 	width: 95%;
 	z-index: -10;
+}
+#titulo-balance{
+	font-size: 1.4em;
+}
+#balance{
+	font-size: 1.6em;
 }
 #btn-ingre{
 	padding: 1.5%;
@@ -400,7 +457,44 @@ h2{
 	font-family: rob;
 	font-size: 1.1em;
 }
+#ty{
+	color: white;
+	font-family: rob;
+	font-size: 1.1em;
+}
 .img-gr{
 	width: 28%;
 	margin-left: 3%;
+}
+.tdCuentas{
+	background-color: white;
+	color: #363636;
+	font-family: sego;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1%;
+}
+.tdTarjetas{
+	background-color: white;
+	color: #363636;
+	font-family: sego;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1%;
+}
+.tdIngresos{
+	background-color: white;
+	color: #363636;
+	font-family: sego;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1%;
+}
+.tdGastos{
+	background-color: white;
+	color: #363636;
+	font-family: sego;
+	text-align: center;
+	font-size: 1.2em;
+	padding: 1%;
 }
