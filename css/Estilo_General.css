@@ -16,6 +16,7 @@
 }
 body{
 	background-color: #f1f1f1;
+	overflow-x: hidden;
 }
 .portada{
 	width: 100%;
