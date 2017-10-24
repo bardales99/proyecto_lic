@@ -9,10 +9,10 @@
     var cerrar = false;
     //Generar valor de los select
     var selectPrincipal = document.getElementById('inputbox2');
-	var selectC = document.getElementById('selcuenta');
-  	var selectT = document.getElementById('seltarjeta');
-	var tipoPago;
-	var selectedOption;
+	var selectC = document.getElementById('selcuentaF');
+  	var selectT = document.getElementById('seltarjetaF');
+	var tipoPago = document.getElementById('opc').value;
+	var selectedOption = document.getElementById('prima').value;
 	var gastosG = localStorage.getItem("#GastosGenerados");
 	var gastosG = JSON.parse(gastosG);
 	var count = gastosG.NumGastosGen;
@@ -41,7 +41,7 @@ function innerMotivo(cuen){
 	
 }
 
-selectPrincipal.addEventListener('change',
+/*selectPrincipal.addEventListener('change',
   function(){
   	selectedOption = this.options[selectPrincipal.selectedIndex];
   	selectedOption = selectedOption.text;
@@ -61,7 +61,7 @@ selectPrincipal.addEventListener('change',
   	});
   	}
 });
-
+*/
 se.addEventListener('change',function(){
 	var ind = se.selectedIndex;
 	var opt = se.options;
@@ -110,7 +110,9 @@ btnAgregar.onclick = function(){
 
     txtMotivo.value = '';
     txtMonto.value = '';
-
+    if (selectedOption == "Efectivo") {
+    	tipoPago = "";
+    }
     var userGas = {
         Fecha: fechaIngreso,
         Motivo: motivo,

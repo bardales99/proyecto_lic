@@ -121,6 +121,7 @@ function iniciar(){
     agasto();
     motivoN();
     aggtarjetas();
+    aggtipopago();
     aggbalanceG();
 window.location = 'menusesion.html';
         },false);
@@ -313,16 +314,30 @@ function aggingreso(){
         localStorage.setItem("#IngresosGenerados", Account);
     }
 function aggbalanceG(){
-    var balan = 0;
+    var efectivo = document.getElementById('inputext1').value;
+    var balan = efectivo;
+    var min = 0;
     var efecUser = localStorage.getItem("UsuarioR");
     var efecUser = JSON.parse(efecUser);
     var NombreUsuario = efecUser.Usuario
 
     var ObjBalance = {
         BalanceGeneral: balan,
-        User: NombreUsuario
+        User: NombreUsuario,
+        BalanceMinimo: min
     };
     var BlncGuardado = JSON.stringify(ObjBalance);
     localStorage.setItem("BalanceIngresosGastos", BlncGuardado);
 }
+function aggtipopago(){
+    var select = "Efectivo";
+    var nel = 0;
+    var pagos = {
+            TipoPago: select,
+            OpcionSelect: nel
+        }
+        var formaP = JSON.stringify(pagos);
+        localStorage.setItem("TipoPago",formaP);
+}
+
 })();
