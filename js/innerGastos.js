@@ -11,8 +11,6 @@
     var selectPrincipal = document.getElementById('inputbox2');
 	var selectC = document.getElementById('selcuentaF');
   	var selectT = document.getElementById('seltarjetaF');
-	var tipoPago = document.getElementById('opc').value;
-	var selectedOption = document.getElementById('prima').value;
 	var gastosG = localStorage.getItem("#GastosGenerados");
 	var gastosG = JSON.parse(gastosG);
 	var count = gastosG.NumGastosGen;
@@ -22,11 +20,96 @@
 	var se = document.getElementById('motivo');
 	var motivo_gen;
 
+	var tipp = localStorage.getItem("TipoPago");
+	var tipp = JSON.parse(tipp);
+	var typetype = tipp.TipoPago;
+	var opciopci = tipp.OpcionSelect;
+
+	var cuentas = document.getElementById('selectC');
+	var tarjeta = document.getElementById('selecT');
+	var select = document.getElementById('inputbox2');
+  var lblC = document.getElementById('titulo-tipos');
+  var lblT = document.getElementById('ty');
+  var cadena;
+  var contSes = document.getElementById('form-in');
+
+
+  var prin = document.createElement('option');
+  var opt = document.createElement('option');
+
+  //se captura el evento del select con el addEventListener
+  function tipopago(){
+  var tipo = localStorage.getItem("TipoPago");
+  var tipo = JSON.parse(tipo);
+
+  var tipoPag = tipo.TipoPago;
+  var opcion = tipo.OpcionSelect;
+  var SelectC = document.getElementById('selcuentaF');
+  var SelectT = document.getElementById('seltarjetaF');
+
+  if (tipoPag == "tarjeta") {
+
+    prin.id = "prima";
+    prin.className = "opcionesS";
+    prin.textContent = "Tarjeta de crédito";
+    prin.value = tipoPag;
+    select.appendChild(prin);
+      opt.id = "opc";
+      opt.className = "opcionesS";
+      opt.textContent = opcion;
+      opt.value = opcion;
+      SelectT.appendChild(opt);
+      tarjeta.style.display = 'block';
+      cuentas.style.display = 'none';
+      lblT.style.color = 'black';
+      lblT.style.fontSize = '1.1em';
+      lblT.style.fontFamily = 'sego';
+
+  }else if(tipoPag == "cuenta"){
+    prin.id = "prima";
+    prin.className = "opcionesS";
+    prin.textContent = "Cuenta de ahorro";
+    prin.value = "Cuenta de ahorro";
+    select.appendChild(prin);
+      opt.id = "opc";
+      opt.className = "opcionesS";
+      opt.textContent = opcion;
+      opt.value = opcion;
+      SelectC.appendChild(opt);
+      tarjeta.style.display = 'none';
+      cuentas.style.display = 'block';
+      lblC.style.color = 'black';
+      lblC.style.fontSize = '1.1em';
+      lblC.style.fontFamily = 'sego';
+  }else if(tipoPag == "Efectivo"){
+    prin.id = "prima";
+    prin.className = "opcionesS";
+    prin.textContent = "Efectivo";
+    prin.value = "Efectivo";
+    select.appendChild(prin);
+      }  
+
+  }
+  /*fin*/
+
+
+
+
+
+
+
+
+
 window.onload = function(){
+	tipopago();
 	var motivosG = localStorage.getItem("#MotivosGenerados");
 	var motivosG = JSON.parse(motivosG);
 	var cuenta = motivosG.NumMotivosGen;
-	innerMotivo(cuenta);	
+	if (cuenta != 0){
+		innerMotivo(cuenta);
+	}else{
+		cuenta = motivosG.NumMotivosGen;
+	}
 }
 
 function innerMotivo(cuen){
@@ -41,27 +124,6 @@ function innerMotivo(cuen){
 	
 }
 
-/*selectPrincipal.addEventListener('change',
-  function(){
-  	selectedOption = this.options[selectPrincipal.selectedIndex];
-  	selectedOption = selectedOption.text;
-  	if (selectedOption == "Cuenta de ahorro"){
-  	selectC.addEventListener('change',function(){
-  	var ind = selectC.selectedIndex;
-  	var opt = selectC.options;
-  	tipoPago = 0;
-  	tipoPago = opt[ind].text;
-  		});
-  	}else if(selectedOption == "Tarjeta de crédito"){
-  	selectT.addEventListener('change',function(){
-  	var ind = selectT.selectedIndex;
-  	var opt = selectT.options;
-  	tipoPago = 0;
-  	tipoPago = opt[ind].text;
-  	});
-  	}
-});
-*/
 se.addEventListener('change',function(){
 	var ind = se.selectedIndex;
 	var opt = se.options;
@@ -70,7 +132,10 @@ se.addEventListener('change',function(){
 //Fin Generar valor de los select
 
 btnAgregar.onclick = function(){
-	
+
+	var sell = document.getElementById('prima').value;
+	var tipp = document.getElementById('opc').value;
+
 	var fechaPa = document.getElementById('inputext1').value;
 	var fech = new Date(fechaPa);
 	var dia = fech.getDate();
@@ -110,15 +175,15 @@ btnAgregar.onclick = function(){
 
     txtMotivo.value = '';
     txtMonto.value = '';
-    if (selectedOption == "Efectivo") {
-    	tipoPago = "";
+    if (sell == "Efectivo") {
+    	opt = "";
     }
     var userGas = {
         Fecha: fechaIngreso,
         Motivo: motivo,
         Monto: monto,
-        TipoPago: selectedOption,
-        LugarGasto: tipoPago,
+        TipoPago: sell,
+        LugarGasto: opt.value,
         Id: count
     };
     var userGasguardado = JSON.stringify(userGas);
@@ -128,7 +193,9 @@ btnAgregar.onclick = function(){
     var pag = userGasString.LugarGasto;
     count += 1;
     agasto(count);
-    restarGasto(monto,count,selectedOption,pag);
+    console.log(sell);
+    console.log(opt.value);
+    restarGasto(monto, count, sell, pag);
     window.location = 'gastos.html';
 }
 function restarGasto(monto,id,sC_T,nC_T){
