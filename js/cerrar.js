@@ -8,7 +8,7 @@ function iniciar(){
 	var boton= document.getElementById('cerrar_sesion');
 	if(boton.addEventListener){
 		boton.addEventListener("click",function(){
-			window.location= '../Index.html';
+			window.location= '../index.html';
 		},false);
 	}
 }
