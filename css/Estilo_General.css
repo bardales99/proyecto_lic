@@ -4,15 +4,15 @@
 }
 @font-face{
 	font-family: open;
-	src: url('../font/openSL.tff') format("truetype");
+	src: url('../font/opensl.tff') format("truetype");
 }
 @font-face{
 	font-family: rob;
-	src: url('../font/RoboT.ttf') format("truetype");
+	src: url('../font/robot.ttf') format("truetype");
 }
 @font-face{
 	font-family: sego;
-	src: url('../font/SEUI.ttf') format("truetype");
+	src: url('../font/seui.ttf') format("truetype");
 }
 body{
 	background-color: #f1f1f1;
