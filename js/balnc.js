@@ -19,7 +19,7 @@ else if(window.attachEvent){
 
 function iniciar(){
 
-	for (var i = 0; i <= 1; i++) {
+	for (var i = 0; i <= 2; i++) {
 		if (localStorage.getItem("Tarjeta # 0")) {
 		var acc = localStorage.getItem("Banco # " + i);
 		var tarjetas = localStorage.getItem("Tarjeta # " + i);
@@ -49,7 +49,7 @@ function iniciar(){
 		
 	}
 	sum = parseFloat(sum) + parseFloat(dinero);
-
+	console.log(sum);
 		for (var i = 0; i <= 50; i++) {
 			var gastos = localStorage.getItem("Gasto # " + i);
 			var ingresos = localStorage.getItem("Ingreso # " + i);
